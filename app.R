@@ -87,6 +87,7 @@ server <- function(input, output) {
       stat_function(fun = ub_2_2) +
       stat_function(fun = lb_2) +
       geom_point(aes(input$b2, input$x), col = col, size = size, show.legend = F, tag = u2) +
+      geom_text(aes(input$b2, input$x, label=u2), size=5, hjust=0.5, vjust=0.5) +
       xlab("b2")
 
     
@@ -110,7 +111,8 @@ server <- function(input, output) {
       stat_function(fun = ub_1) +
       stat_function(fun = lb_1_1) +
       stat_function(fun = lb_1_2) +
-      geom_point(aes(input$b1, input$x), col = col, size = size, show.legend = F, tag = u1) +
+      geom_point(aes(input$b1, input$x), col = col, size = size, show.legend = F) +
+      geom_text(aes(input$b1, input$x, label=u1), size=5, hjust=0.5, vjust=0.5) +
       xlab("b1")
     
 
